@@ -55,7 +55,7 @@ def Historial(usuario,puesto):
     filtro_7 = placeholder9_7.selectbox("Filtro", options=("Todos","Operarios","Propio","Personal Asignado"), key="filtro_7")
 
     placeholder10_7 = st.empty()
-    proceso_7_s = placeholder10_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IFI","Información Final II","Información Final III"), key="proceso_7_s")
+    proceso_7_s = placeholder10_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IF I","Información Final II","Información Final III"), key="proceso_7_s")
     
     if filtro_7=="Todos" and proceso_7_s=="Todos":
         data = pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,predios,horas from registro where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
@@ -84,7 +84,7 @@ def Historial(usuario,puesto):
   elif puesto=="Operario Catastral":
 
     placeholder11_7 = st.empty()
-    proceso_7_o= placeholder11_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IFI","Información Final II","Información Final III"), key="proceso_7_o")
+    proceso_7_o= placeholder11_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IF I","Información Final II","Información Final III"), key="proceso_7_o")
         
     if proceso_7_o =="Todos":
         data = pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,predios,horas from registro where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
