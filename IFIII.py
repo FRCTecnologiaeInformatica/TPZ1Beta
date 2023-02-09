@@ -52,7 +52,7 @@ def IFIII(usuario,puesto):
   estado_5= placeholder10_5.selectbox("Estado", options=("En Proceso","Conflicto","Terminado"), key="estado_5")
        
   placeholder11_5= st.empty()
-  tipo_5= placeholder11_5.selectbox("Tipo", options=("Ordinario","Conflicto"), key="tipo_5")
+  tipo_5= placeholder11_5.selectbox("Tipo", options=("Ordinario","Corrección"), key="tipo_5")
        
   placeholder12_5= st.empty()
   predios_5= placeholder12_5.number_input("Cantidad de Predios Producidos",min_value=0,step=1,key="predios_5")
