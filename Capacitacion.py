@@ -96,7 +96,7 @@ def Capacitacion(usuario,puesto):
       placeholder7_8 = st.empty()
       capacitacion_registro_8 = placeholder7_8.subheader("Registro")
 
-      data_personal = pd.read_sql(f"select nombre from usuarios where estado='Activo' and supervisor='{nombre_8}'", con)
+      data_personal = pd.read_sql(f"select nombre from usuarios where estado='Activo' and supervisor='{nombre_8}' or usuario='{usuario}'", con)
       placeholder8_8 = st.empty()
       personal_8= placeholder8_8.multiselect("Personal",data_personal)
       
