@@ -187,8 +187,8 @@ def CC_IFI(usuario,puesto):
     horario_12= pd.read_sql(f"select horario from usuarios where usuario ='{usuario}'",uri)
     horario_12 = horario_12.loc[0,'horario']
 
-    supervisor_12= pd.read_sql(f"select horario from usuarios where usuario ='{usuario}'",uri)
-    supervisor_12 = horario_12.loc[0,'horario']
+    supervisor_12= pd.read_sql(f"select supervisor from usuarios where usuario ='{usuario}'",uri)
+    supervisor_12 = supervisor_12.loc[0,'supervisor']
 
     cursor01.execute(f"INSERT INTO registro (marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,predios,horas)VALUES('{marca_12}','{usuario}','{nombre_12}','{horario_12}','{puesto}','{supervisor_12}','Control de Calidad IF I','{fecha_12}','{bloque_12}','{estado_12}','No Aplica','{predios_12}','{horas_12}')")
     con.commit()
