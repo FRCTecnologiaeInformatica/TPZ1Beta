@@ -64,49 +64,49 @@ def Historial(usuario,puesto):
 
     if filtro_7=="Todos" and proceso_7_s=="Todos":
         
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
     elif filtro_7=="Todos" and proceso_7_s !="Todos":
         
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where proceso='{proceso_7_s}' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where proceso='{proceso_7_s}' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
     elif filtro_7=="Operarios" and proceso_7_s =="Todos":
        
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where puesto='Operario Catastral' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where puesto='Operario Catastral' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
     elif filtro_7=="Operarios" and proceso_7_s !="Todos":
         
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where puesto='Operario Catastral' and tipo='{tipo_7_s}' and proceso='{proceso_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where puesto='Operario Catastral' and tipo='{tipo_7_s}' and proceso='{proceso_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
     elif filtro_7=="Propio" and proceso_7_s=="Todos":
         
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
     elif filtro_7=="Propio" and proceso_7_s !="Todos":
         
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and tipo='{tipo_7_s}' and proceso='{proceso_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and tipo='{tipo_7_s}' and proceso='{proceso_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
     elif filtro_7=="Personal Asignado" and proceso_7_s =="Todos":
         
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where supervisor='{nombre_7}' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where supervisor='{nombre_7}' and tipo='{tipo_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
     elif filtro_7=="Personal Asignado" and proceso_7_s !="Todos":
        
-        data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where supervisor='{nombre_7}' and tipo='{tipo_7_s}' and proceso='{proceso_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+        data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where supervisor='{nombre_7}' and tipo='{tipo_7_s}' and proceso='{proceso_7_s}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
         data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
         data_3 = data_1.groupby(["fecha"], as_index=False)["predios"].agg(np.sum)
 
@@ -122,12 +122,12 @@ def Historial(usuario,puesto):
 
     if proceso_7_o =="Todos":
         
-      data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and tipo='{tipo_7_o}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+      data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and tipo='{tipo_7_o}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
       data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
 
     else:
        
-      data_1=pd.read_sql(f"select marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}'and tipo='{tipo_7_o}' and proceso='{proceso_7_o}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
+      data_1=pd.read_sql(f"select id,marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}'and tipo='{tipo_7_o}' and proceso='{proceso_7_o}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
       data_2 = data_1.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
 
   # ----- Reportes ---- #
