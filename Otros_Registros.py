@@ -53,7 +53,7 @@ def Otros_Registros(usuario,puesto):
 
     data_personal_13 = pd.read_sql(f"select nombre from usuarios where estado='Activo'", con)
     placeholder9_13 = st.empty()
-    personal_13= placeholder9_13.multiselect("Personal",("1","2"),key="personal_13")
+    personal_13= placeholder9_13.multiselect("Personal",data_personal_13,key="personal_13")
 
     default_date_13=datetime.now(pytz.timezone('America/Chicago'))
 
