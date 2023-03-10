@@ -49,7 +49,7 @@ def Historial(usuario,puesto):
 
   placeholder8_7 = st.empty()
   fecha_de__inicio_7 = placeholder8_7.date_input("Fecha de Inicio",value=default_date_7,key="fecha_de_inicio_7")
-
+  
   placeholder9_7 = st.empty()
   fecha_de__finalizacion_7 = placeholder9_7.date_input("Fecha de Finalización",value=default_date_7,key="fecha_de_finalizacion_7")
   
