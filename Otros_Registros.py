@@ -55,7 +55,7 @@ def Otros_Registros(usuario,puesto):
     placeholder9_13 = st.empty()
     personal_13= placeholder9_13.multiselect("Personal",data_personal_13,key="personal_13")
 
-    default_date_13=datetime.now(pytz.timezone('America/Chicago'))
+    default_date_13=datetime.now(pytz.timezone('America/Guatemala'))
 
     placeholder10_13= st.empty()
     fecha_13= placeholder10_13.date_input("Fecha",value=default_date_13,key="fecha_13")
@@ -366,7 +366,7 @@ def Otros_Registros(usuario,puesto):
         for nombre in personal_13:
           cursor01=con.cursor()
           
-          marca_13= datetime.now(pytz.timezone('America/Chicago')).strftime("%Y-%m-%d %H:%M:%S")
+          marca_13= datetime.now(pytz.timezone('America/Guatemala')).strftime("%Y-%m-%d %H:%M:%S")
 
           usuario_13= pd.read_sql(f"select usuario from usuarios where nombre ='{nombre}'",uri)
           usuario_13 = usuario_13.loc[0,'usuario']
