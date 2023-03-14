@@ -53,7 +53,7 @@ def Capacitacion(usuario,puesto):
     placeholder9_8 = st.empty()
     personal_8= placeholder9_8.multiselect("Personal",data_personal_8,key="personal_8")
 
-    default_date_8 = datetime.now(pytz.timezone('America/Chicago'))
+    default_date_8 = datetime.now(pytz.timezone('America/Guatemala'))
       
     placeholder10_8= st.empty()
     fecha_8= placeholder10_8.date_input("Fecha",value=default_date_8,key="fecha_8")
@@ -103,7 +103,7 @@ def Capacitacion(usuario,puesto):
     placeholder9_8 = st.empty()
     personal_8= placeholder9_8.multiselect("Personal",data_personal_8,key="personal_8")
 
-    default_date_8 = datetime.now(pytz.timezone('America/Chicago'))
+    default_date_8 = datetime.now(pytz.timezone('America/Guatemala'))
       
     placeholder10_8= st.empty()
     fecha_8= placeholder10_8.date_input("Fecha",value=default_date_8,key="fecha_8")
@@ -146,7 +146,7 @@ def Capacitacion(usuario,puesto):
     placeholder18_8 = st.empty()
     capacitacion_historial_8 = placeholder18_8.subheader("Historial")
 
-    default_date_8 = datetime.now(pytz.timezone('America/Chicago'))
+    default_date_8 = datetime.now(pytz.timezone('America/Guatemala'))
 
     placeholder19_8 = st.empty()
     fecha_de__inicio_8 = placeholder19_8.date_input("Fecha de Inicio",value=default_date_8,key="fecha_de_inicio_8")
@@ -347,7 +347,7 @@ def Capacitacion(usuario,puesto):
         for nombre in personal_8:
           cursor01=con.cursor()
           
-          marca_8= datetime.now(pytz.timezone('America/Chicago')).strftime("%Y-%m-%d %H:%M:%S")
+          marca_8= datetime.now(pytz.timezone('America/Guatemala')).strftime("%Y-%m-%d %H:%M:%S")
 
           usuario_8= pd.read_sql(f"select usuario from usuarios where nombre ='{nombre}'",uri)
           usuario_8 = usuario_8.loc[0,'usuario']
