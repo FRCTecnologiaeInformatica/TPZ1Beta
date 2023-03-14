@@ -45,7 +45,7 @@ def IFIII(usuario,puesto):
   placeholder8_5 = st.empty()
   informacion_final_iii_5 = placeholder8_5.title("Información Final III")
 
-  default_date_5 = datetime.now(pytz.timezone('America/Chicago'))
+  default_date_5 = datetime.now(pytz.timezone('America/Guatemala'))
 
   placeholder9_5= st.empty()
   fecha_5= placeholder9_5.date_input("Fecha",value=default_date_5,key="fecha_5")
@@ -223,7 +223,7 @@ def IFIII(usuario,puesto):
 
     cursor01=con.cursor()
 
-    marca_5= datetime.now(pytz.timezone('America/Chicago')).strftime("%Y-%m-%d %H:%M:%S")
+    marca_5= datetime.now(pytz.timezone('America/Guatemala')).strftime("%Y-%m-%d %H:%M:%S")
     
     nombre_5= pd.read_sql(f"select nombre from usuarios where usuario ='{usuario}'",uri)
     nombre_5 = nombre_5.loc[0,'nombre']
