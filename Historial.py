@@ -45,7 +45,7 @@ def Historial(usuario,puesto):
   placeholder7_7 = st.empty()
   historial_7 = placeholder7_7.title("Historial")
 
-  default_date_7 = datetime.now(pytz.timezone('America/Chicago'))
+  default_date_7 = datetime.now(pytz.timezone('America/Guatemala'))
 
   placeholder8_7 = st.empty()
   fecha_de__inicio_7 = placeholder8_7.date_input("Fecha de Inicio",value=default_date_7,key="fecha_de_inicio_7")
