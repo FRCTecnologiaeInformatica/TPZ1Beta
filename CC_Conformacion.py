@@ -45,7 +45,7 @@ def CC_Conformacion(usuario,puesto):
   placeholder8_11 = st.empty()
   conformacion_11 = placeholder8_11.title("Control de Calidad de Conformación")
 
-  default_date_11 = datetime.now(pytz.timezone('America/Chicago'))
+  default_date_11 = datetime.now(pytz.timezone('America/Guatemala'))
 
   placeholder9_11= st.empty()
   fecha_11= placeholder9_11.date_input("Fecha",value=default_date_11,key="fecha_11")
@@ -212,7 +212,7 @@ def CC_Conformacion(usuario,puesto):
 
     cursor01=con.cursor()
 
-    marca_11=datetime.now(pytz.timezone('America/Chicago')).strftime("%Y-%m-%d %H:%M:%S")
+    marca_11=datetime.now(pytz.timezone('America/Guatemala')).strftime("%Y-%m-%d %H:%M:%S")
 
     nombre_11= pd.read_sql(f"select nombre from usuarios where usuario ='{usuario}'",uri)
     nombre_11 = nombre_11.loc[0,'nombre']
