@@ -90,15 +90,15 @@ def CC_Conformacion(usuario,perfil):
 
     if perfil=="1":        
                     
-      Procesos.Procesos1(usuario,puesto)
+      Procesos.Procesos1(usuario,perfil)
                 
     elif perfil=="2":        
                     
-      Procesos.Procesos2(usuario,puesto)   
+      Procesos.Procesos2(usuario,perfil)   
 
     elif perfil=="3":  
 
-      Procesos.Procesos3(usuario,puesto)       
+      Procesos.Procesos3(usuario,perfil)       
 
 
   #----- Historial ---- #
@@ -120,7 +120,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Historial=True
-    Historial.Historial(usuario,puesto)   
+    Historial.Historial(usuario,perfil)   
 
   # ----- Capacitación ---- #
     
@@ -141,7 +141,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Capacitacion=True
-    Capacitacion.Capacitacion(usuario,puesto)
+    Capacitacion.Capacitacion(usuario,perfil)
 
   # ----- Otros Registros ---- #
     
@@ -162,7 +162,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Otros_Registros=True
-    Otros_Registros.Otros_Registros(usuario,puesto)
+    Otros_Registros.Otros_Registros(usuario,perfil)
 
   # ----- Bonos ---- #
     
@@ -184,7 +184,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Bonos=True
-    Bonos.Bonos(usuario,puesto)    
+    Bonos.Bonos(usuario,perfil)    
 
   # ----- Salir ---- #
     
