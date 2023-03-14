@@ -8,7 +8,7 @@ import pytz
 from urllib.parse import urlparse
 import Procesos,Historial,Capacitacion,Otros_Registros,Bonos,Salir
 
-def CC_Conformacion(usuario,perfil):
+def CC_Conformacion(usuario,puesto):
 
   # ----- Conexión, Botones y Memoria ---- #
 
@@ -90,15 +90,15 @@ def CC_Conformacion(usuario,perfil):
 
     if perfil=="1":        
                     
-      Procesos.Procesos1(usuario,perfil)
+      Procesos.Procesos1(usuario,puesto)
                 
     elif perfil=="2":        
                     
-      Procesos.Procesos2(usuario,perfil)   
+      Procesos.Procesos2(usuario,puesto)   
 
     elif perfil=="3":  
 
-      Procesos.Procesos3(usuario,perfil)       
+      Procesos.Procesos3(usuario,puesto)       
 
 
   #----- Historial ---- #
@@ -120,7 +120,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Historial=True
-    Historial.Historial(usuario,perfil)   
+    Historial.Historial(usuario,puesto)   
 
   # ----- Capacitación ---- #
     
@@ -141,7 +141,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Capacitacion=True
-    Capacitacion.Capacitacion(usuario,perfil)
+    Capacitacion.Capacitacion(usuario,puesto)
 
   # ----- Otros Registros ---- #
     
@@ -162,7 +162,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Otros_Registros=True
-    Otros_Registros.Otros_Registros(usuario,perfil)
+    Otros_Registros.Otros_Registros(usuario,puesto)
 
   # ----- Bonos ---- #
     
@@ -184,7 +184,7 @@ def CC_Conformacion(usuario,perfil):
     placeholder14_11.empty()
     st.session_state.CC_Conformacion=False
     st.session_state.Bonos=True
-    Bonos.Bonos(usuario,perfil)    
+    Bonos.Bonos(usuario,puesto)    
 
   # ----- Salir ---- #
     
