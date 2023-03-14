@@ -98,7 +98,7 @@ def CC_Conformacion(usuario,puesto):
 
     elif perfil=="3":  
 
-      Procesos.Procesos3(usuario,puesto)       
+      Procesos.Procesos3(usuario,puesto) 
 
 
   #----- Historial ---- #
