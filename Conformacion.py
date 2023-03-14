@@ -220,7 +220,7 @@ def Conformacion(usuario,puesto):
 
     cursor01=con.cursor()
 
-    marca_10=datetime.now(pytz.timezone('America/Chicago')).strftime("%Y-%m-%d %H:%M:%S")
+    marca_10=datetime.now(pytz.timezone('America/Guatemala')).strftime("%Y-%m-%d %H:%M:%S")
     
     nombre_10= pd.read_sql(f"select nombre from usuarios where usuario ='{usuario}'",uri)
     nombre_10 = nombre_10.loc[0,'nombre']
