@@ -45,7 +45,7 @@ def CC_IFI(usuario,puesto):
   placeholder8_12 = st.empty()
   conformacion_12 = placeholder8_12.title("Control de Calidad de Información Final I")
 
-  default_date_12 = datetime.now(pytz.timezone('America/Chicago'))
+  default_date_12 = datetime.now(pytz.timezone('America/Guatemala'))
 
   placeholder9_12= st.empty()
   fecha_12= placeholder9_12.date_input("Fecha",value=default_date_12,key="fecha_12")
@@ -210,7 +210,7 @@ def CC_IFI(usuario,puesto):
 
     cursor01=con.cursor()
 
-    marca_12=datetime.now(pytz.timezone('America/Chicago')).strftime("%Y-%m-%d %H:%M:%S")
+    marca_12=datetime.now(pytz.timezone('America/Guatemala')).strftime("%Y-%m-%d %H:%M:%S")
     nombre_12= pd.read_sql(f"select nombre from usuarios where usuario ='{usuario}'",uri)
 
     nombre_12 = nombre_12.loc[0,'nombre']
