@@ -8,7 +8,7 @@ import pytz
 from urllib.parse import urlparse
 import Procesos,Historial,Capacitacion,Otros_Registros,Bonos,Salir
 
-def CC_Conformacion(usuario,puesto):
+def CC_Conformacion(usuario,perfil):
 
   # ----- Conexión, Botones y Memoria ---- #
 
