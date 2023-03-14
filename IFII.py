@@ -45,7 +45,7 @@ def IFII(usuario,puesto):
   placeholder8_4 = st.empty()
   informacion_final_ii_4 = placeholder8_4.title("Información Final II")
 
-  default_date_4 = datetime.now(pytz.timezone('America/Chicago'))
+  default_date_4 = datetime.now(pytz.timezone('America/Guatemala'))
 
   placeholder9_4= st.empty()
   fecha_4= placeholder9_4.date_input("Fecha",value=default_date_4,key="fecha_4")
@@ -219,7 +219,7 @@ def IFII(usuario,puesto):
 
     cursor01=con.cursor()
 
-    marca_4= datetime.now(pytz.timezone('America/Chicago')).strftime("%Y-%m-%d %H:%M:%S")
+    marca_4= datetime.now(pytz.timezone('America/Guatemala')).strftime("%Y-%m-%d %H:%M:%S")
     
     nombre_4= pd.read_sql(f"select nombre from usuarios where usuario ='{usuario}'",uri)
     nombre_4 = nombre_4.loc[0,'nombre']
