@@ -45,7 +45,7 @@ def Conformacion(usuario,puesto):
   placeholder8_10 = st.empty()
   conformacion_10 = placeholder8_10.title("Conformación")
 
-  default_date_10 = datetime.now(pytz.timezone('America/Chicago'))
+  default_date_10 = datetime.now(pytz.timezone('America/Guatemala'))
 
   placeholder9_10= st.empty()
   fecha_10= placeholder9_10.date_input("Fecha",value=default_date_10,key="fecha_10")
