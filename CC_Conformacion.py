@@ -64,7 +64,7 @@ def CC_Conformacion(usuario,puesto):
 
   placeholder14_11 = st.empty()
   reporte_11 = placeholder14_11.button("Generar Reporte",key="reporte_11")
-
+  
   # ----- Procesos ---- #
     
   if procesos_11:
@@ -82,7 +82,7 @@ def CC_Conformacion(usuario,puesto):
     placeholder12_11.empty()
     placeholder13_11.empty()
     placeholder14_11.empty()
-    st.session_state.Registro=False
+    st.session_state.Procesos=False
     st.session_state.CC_Conformacion=False
 
     perfil=pd.read_sql(f"select perfil from usuarios where usuario ='{usuario}'",uri)
@@ -99,8 +99,7 @@ def CC_Conformacion(usuario,puesto):
     elif perfil=="3":  
 
       Procesos.Procesos3(usuario,puesto) 
-
-
+      
   #----- Historial ---- #
     
   elif historial_11:
