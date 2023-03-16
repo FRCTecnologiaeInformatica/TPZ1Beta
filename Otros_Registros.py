@@ -111,7 +111,7 @@ def Otros_Registros(usuario,puesto):
     placeholder9_13 = st.empty()
     personal_13= placeholder9_13.multiselect("Personal",data_personal_13,key="personal_13")
 
-    default_date_13=datetime.now(pytz.timezone('America/Chicago'))
+    default_date_13=datetime.now(pytz.timezone('America/Guatemala'))
 
     placeholder10_13= st.empty()
     fecha_13= placeholder10_13.date_input("Fecha",value=default_date_13,key="fecha_13")
@@ -160,7 +160,7 @@ def Otros_Registros(usuario,puesto):
     placeholder19_13 = st.empty()
     otros_registros_historial_13 = placeholder19_13.subheader("Historial")
 
-    default_date_13 = datetime.now(pytz.timezone('America/Chicago'))
+    default_date_13 = datetime.now(pytz.timezone('America/Guatemala'))
 
     placeholder20_13 = st.empty()
     fecha_de__inicio_13 = placeholder20_13.date_input("Fecha de Inicio",value=default_date_13,key="fecha_de_inicio_13")
