@@ -608,7 +608,7 @@ def Historial(usuario,puesto):
       placeholder27_7.empty()
     
       if pivot_reportes==0:
-        placeholder14_7.empty()
+        #placeholder14_7.empty()
       
       else:
         placeholder15_7.empty()
