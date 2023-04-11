@@ -239,8 +239,8 @@ def Historial(usuario,puesto):
 
     if pivot_reportes==0:
        
-      #placeholder14_7 = st.empty()
-      st.error('No existen reportes para mostrar')#error_reportes= placeholder14_7
+      placeholder14_7 = st.empty()
+      error_reportes= placeholder14_7st.error('No existen reportes para mostrar')
 
     else:
 
@@ -608,7 +608,7 @@ def Historial(usuario,puesto):
       placeholder27_7.empty()
     
       if pivot_reportes==0:
-        #placeholder14_7.empty()
+        placeholder14_7.empty()
       
       else:
         placeholder15_7.empty()
