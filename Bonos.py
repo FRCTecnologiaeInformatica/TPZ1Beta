@@ -39,7 +39,7 @@ def Bonos(usuario,puesto):
   salir_9 = placeholder6_9.button("Salir",key="salir_9")
 
   placeholder7_9 = st.empty()
-  registro_de_bonos_9 = placeholder7_9.title("Registro de Bonos (Datos de Prueba)")
+  registro_de_bonos_9 = placeholder7_9.title("Registro de Bonos")
 
   nombre_9= pd.read_sql(f"select nombre from usuarios where usuario='{usuario}'",uri)
   nombre_9 = nombre_9.loc[0,'nombre']
