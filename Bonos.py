@@ -91,7 +91,7 @@ def Bonos(usuario,puesto):
 
     data_personal_9 = pd.read_sql(f"select nombre from usuarios where estado='Activo'", con)
     placeholder9_9 = st.empty()
-    todos=["Todos"]
+    todos=["55555"]
     data_personal_10=data_personal_9.append(todos)
     personal_9= placeholder9_9.selectbox("Personal",data_personal_10,key="personal_8")
 
