@@ -94,6 +94,7 @@ def Bonos(usuario,puesto):
     todos=["55555"]
     data_personal_10=data_personal_9.append(["55555"])
     personal_9= placeholder9_9.selectbox("Personal",data_personal_10,key="personal_8")
+    personal_9="Todos"
 
     placeholder13_9 = st.empty()
     periodo_bonos_9 = placeholder13_9.selectbox("Periodo de Bono", options=("Febrero-2023","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023"), key="periodo_bonos_9")    
