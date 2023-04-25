@@ -88,14 +88,14 @@ def Bonos(usuario,puesto):
 
     placeholder12_9 = st.empty()
     titulo_bonos_9 = placeholder12_9.subheader("Bonos")
-
+    
     data_personal_9 = pd.read_sql(f"select nombre from usuarios where estado='Activo'", con)
+    array1 = numpy.array(data_personal_9)
     placeholder9_9 = st.empty()
-    prueba=pd.DataFrame(data=data_personal_9)
     todos=['Todos','Ninguno']
-    data_personal_10=prueba.append(todos)
+    data_personal_10=numpy.append(data_personal_9,todos)
     personal_9= placeholder9_9.selectbox("Personal",data_personal_10,key="personal_8")
-
+    
     placeholder13_9 = st.empty()
     periodo_bonos_9 = placeholder13_9.selectbox("Periodo de Bono", options=("Febrero-2023","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023"), key="periodo_bonos_9")    
 
