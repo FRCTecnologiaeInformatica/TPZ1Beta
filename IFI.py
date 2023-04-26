@@ -51,7 +51,7 @@ def IFI(usuario,puesto):
   fecha_3= placeholder9_3.date_input("Fecha",value=default_date_3,key="fecha_3")
 
   placeholder10_3= st.empty()
-  bloque_3= placeholder10_3.number_input("Bloque",min_value=10000000,max_value=99999999,step=1,key="bloque_3")
+  bloque_3= placeholder10_3.text_input("Bloque",key="bloque_3")
     
   placeholder11_3= st.empty()
   estado_3= placeholder11_3.selectbox("Estado", options=("En Proceso","Conflicto","Terminado"), key="estado_3")
