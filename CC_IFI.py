@@ -51,7 +51,7 @@ def CC_IFI(usuario,puesto):
   fecha_12= placeholder9_12.date_input("Fecha",value=default_date_12,key="fecha_12")
 
   placeholder10_12= st.empty()
-  bloque_12= placeholder10_12.number_input("Bloque",min_value=10000000,max_value=99999999,step=1,key="bloque_11")
+  bloque_12= placeholder10_12.text_input("Bloque",key="bloque_11")
     
   placeholder11_12= st.empty()
   estado_12= placeholder11_12.selectbox("Estado", options=("En Proceso","Aprobado","Rechazado","Primera Reinspección Aprobada","Primera Reinspección Rechazada","Segunda Reinspección Aprobada","Segunda Reinspección Rechazada"), key="estado_12")
