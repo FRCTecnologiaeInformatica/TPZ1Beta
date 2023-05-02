@@ -67,7 +67,7 @@ def Historial(usuario,puesto):
     proceso_7_s = placeholder11_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IF I","Información Final II","Información Final III"), key="proceso_7_s")
     
     placeholder12_7 = st.empty()
-    tipo_7_s = placeholder12_7.selectbox("Tipo", options=("Todos","Ordinario","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_s")
+    tipo_7_s = placeholder12_7.selectbox("Tipo", options=("Todos","Ordinario","Afectados","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_s")
 
     if personal_7=="Todos" and proceso_7_s=="Todos" and tipo_7_s=="Todos":
         
@@ -437,7 +437,7 @@ def Historial(usuario,puesto):
     proceso_7_o= placeholder33_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IF I","Información Final II","Información Final III"), key="proceso_7_o")
 
     placeholder34_7 = st.empty()
-    tipo_7_o = placeholder34_7.selectbox("Tipo", options=("Todos","Ordinario","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_o")    
+    tipo_7_o = placeholder34_7.selectbox("Tipo", options=("Todos","Ordinario","Afectados","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_o")    
 
     if proceso_7_o =="Todos" and tipo_7_o=="Todos":
         
