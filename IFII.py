@@ -54,10 +54,10 @@ def IFII(usuario,puesto):
   bloque_4= placeholder10_4.number_input("Bloque o Distrito",min_value=10000000,max_value=99999999,step=1,key="bloque_4")
     
   placeholder11_4= st.empty()
-  tipo_4= placeholder11_4.selectbox("Estado", options=("En Proceso","Conflicto","Terminado"), key="estado_4")
+  estado_4= placeholder11_4.selectbox("Estado", options=("En Proceso","Conflicto","Terminado"), key="estado_4")
        
   placeholder12_4= st.empty()
-  estado_4= placeholder12_4.selectbox("Tipo",options=("Ordinario","Afectados","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_4")
+  tipo_4= placeholder12_4.selectbox("Tipo",options=("Ordinario","Afectados","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_4")
 
   placeholder13_4= st.empty()
   predios_4= placeholder13_4.number_input("Cantidad de Predios Producidos",min_value=0,step=1,key="predios_4")
