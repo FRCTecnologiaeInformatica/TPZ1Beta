@@ -74,11 +74,11 @@ def Historial(usuario,puesto):
       data_1_r=pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
 
       data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
+      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
       data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
-
+      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
+      
     elif personal_7=="Todos" and proceso_7_s=="Todos" and tipo_7_s!="Todos":
         
       if tipo_7_s=="Ordinario":
