@@ -329,9 +329,9 @@ def Historial(usuario,puesto):
       historialc= placeholderb.dataframe(data=data_2_c)
       historialo= placeholderc.dataframe(data=data_2_o)
       
-      nombre_r=data_2_r.iloc[:,0]
-      nombre_c=data_2_c.iloc[:,0]
-      nombre_o=data_2_o.iloc[:,0]
+      nombre_r=data_2_r.iloc[:,[0]]
+      nombre_c=data_2_c.iloc[:,[0]]
+      nombre_o=data_2_o.iloc[:,[0]]
 
       nombre_horas= nombre_r.append(nombre_c)
       nombre_horas= nombre_r.append(nombre_o)
