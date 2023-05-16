@@ -344,7 +344,7 @@ def Historial(usuario,puesto):
       
       placeholdere = st.empty()
       
-      historiale= placeholdere.dataframe(data=nombre_r.append(nombre_c))
+      historiale= placeholdere.dataframe(data=nombre_r.insert(nombre_c))
 
 
       nombre_horas= nombre_r.append(nombre_c)
