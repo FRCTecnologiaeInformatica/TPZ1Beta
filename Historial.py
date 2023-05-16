@@ -326,8 +326,8 @@ def Historial(usuario,puesto):
       fecha_c=data_2_c.iloc[:,1]
       fecha_o=data_2_o.iloc[:,1]
 
-      fecha_horas=fecha_r.append(fecha_c)
-      fecha_horas=fecha_horas.append(fecha_o)
+      #fecha_horas=fecha_r.append(fecha_c)
+      #fecha_horas=fecha_horas.append(fecha_o)
 
       datos_horas = pd.DataFrame(data={"Nombre":nombre_r,"Fecha":fecha_r}).groupby(["Nombre","Fecha"],as_index=False).size()
 
