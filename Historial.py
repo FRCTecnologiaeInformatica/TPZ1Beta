@@ -336,7 +336,7 @@ def Historial(usuario,puesto):
       nombre_o=data_2_o.iloc[:,0]
       
       placeholderf = st.empty()
-      historialf= placeholderd.dataframe(data=nombre_r)
+      historialf= placeholderf.dataframe(data=nombre_r)
       
       placeholderd = st.empty()
       
