@@ -320,7 +320,7 @@ def Historial(usuario,puesto):
       nombre_o=data_2_o.iloc[:,0]
 
       #nombre_horas= nombre_r.append(nombre_c)
-      nombre_horas= nombre_r.append(nombre_o)
+      #nombre_horas= nombre_r.append(nombre_o)
 
       fecha_r=data_2_r.iloc[:,1]
       fecha_c=data_2_c.iloc[:,1]
@@ -329,7 +329,7 @@ def Historial(usuario,puesto):
       fecha_horas=fecha_r.append(fecha_c)
       fecha_horas=fecha_horas.append(fecha_o)
 
-      datos_horas = pd.DataFrame(data={"Nombre":nombre_horas,"Fecha":fecha_horas}).groupby(["Nombre","Fecha"],as_index=False).size()
+      datos_horas = pd.DataFrame(data={"Nombre":nombre_r,"Fecha":fecha_r}).groupby(["Nombre","Fecha"],as_index=False).size()
 
       datos_horas["Horas_Producción"] = 0.0000
       datos_horas["Horas_Capacitación"] = 0.0000
