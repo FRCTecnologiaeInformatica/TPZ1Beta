@@ -318,7 +318,7 @@ def Historial(usuario,puesto):
       
     
       data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)[['horas']].agg(np.sum)
+      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
 
       data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
       data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
@@ -344,7 +344,7 @@ def Historial(usuario,puesto):
       
       placeholdere = st.empty()
       
-      historiale= placeholdere.dataframe(data=nombre_r.extend(nombre_c))
+      historiale= placeholdere.dataframe(data=nombre_r._append(nombre_c))
 
 
       nombre_horas= nombre_r.append(nombre_c)
