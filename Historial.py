@@ -325,7 +325,7 @@ def Historial(usuario,puesto):
       nombre_c=data_2_c.iloc[:,0]
       nombre_o=data_2_o.iloc[:,0]
 
-      nombre_horas= pd.concat([nombre_r],[nombre_c])
+      nombre_horas= pd.concat([nombre_r,nombre_c])
       nombre_horas= nombre_horas.concat([nombre_o])
 
       fecha_r=data_2_r.iloc[:,1]
