@@ -516,7 +516,7 @@ def Historial(usuario,puesto):
     placeholder39_7 = st.empty()
     horas_7=placeholder39_7.subheader("Resumen de Horas")  
 
-    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
+    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["predios","horas"]].agg(np.sum)
   
     pivot_r=len(data_2_r.iloc[:,0])
     pivot_c=len(data_2_c.iloc[:,0])
@@ -533,15 +533,15 @@ def Historial(usuario,puesto):
       nombre_c=data_2_c.iloc[:,0]
       nombre_o=data_2_o.iloc[:,0]
 
-      nombre_horas= nombre_r.append(nombre_c)
-      nombre_horas= nombre_horas.append(nombre_o)
+      nombre_horas= pd.concat([nombre_r,nombre_c])
+      nombre_horas= pd.concat([nombre_horas,nombre_o])
 
       fecha_r=data_2_r.iloc[:,1]
       fecha_c=data_2_c.iloc[:,1]
       fecha_o=data_2_o.iloc[:,1]
 
-      fecha_horas=fecha_r.append(fecha_c)
-      fecha_horas=fecha_horas.append(fecha_o)
+      fecha_horas=pd.concat([fecha_r,fecha_c])
+      fecha_horas=pd.concat([fecha_horas,fecha_o])
 
       datos_horas = pd.DataFrame(data={"Nombre":nombre_horas,"Fecha":fecha_horas}).groupby(["Nombre","Fecha"],as_index=False).size()
 
@@ -576,7 +576,7 @@ def Historial(usuario,puesto):
     placeholder43_7 = st.empty()
     producción_7=placeholder43_7.subheader("Resumen de Producción")  
 
-    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
+    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["predios","horas"]].agg(np.sum)
 
     if pivot_r==0:  
 
