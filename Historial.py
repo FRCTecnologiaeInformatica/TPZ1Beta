@@ -314,26 +314,20 @@ def Historial(usuario,puesto):
       error_horas= placeholder18_7.error('No existen horas para mostrar')
 
     else:
-
-      data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
-
-      data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
       
       nombre_r=data_2_r.iloc[:,0]
       nombre_c=data_2_c.iloc[:,0]
       nombre_o=data_2_o.iloc[:,0]
 
       nombre_horas= pd.concat([nombre_r,nombre_c])
-      nombre_horas= nombre_horas.concat([nombre_o])
+      nombre_horas= pd.concat([nombre_horas,nombre_o])
 
       fecha_r=data_2_r.iloc[:,1]
       fecha_c=data_2_c.iloc[:,1]
       fecha_o=data_2_o.iloc[:,1]
 
-      fecha_horas=fecha_r.append(fecha_c)
-      fecha_horas=fecha_horas.append(fecha_o)
+      fecha_horas=pd.concat([fecha_r,fecha_c])
+      fecha_horas=pd.concat([fecha_horas,fecha_o])
 
       datos_horas = pd.DataFrame(data={"Nombre":nombre_horas,"Fecha":fecha_horas}).groupby(["Nombre","Fecha"],as_index=False).size()
 
