@@ -67,7 +67,7 @@ def Historial(usuario,puesto):
     proceso_7_s = placeholder11_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IF I","Información Final II","Información Final III"), key="proceso_7_s")
     
     placeholder12_7 = st.empty()
-    tipo_7_s = placeholder12_7.selectbox("Tipo", options=("Todos","Ordinario","Afectados","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_s")
+    tipo_7_s = placeholder12_7.selectbox("Tipo", options=("Todos","Ordinario","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_s")
 
     if personal_7=="Todos" and proceso_7_s=="Todos" and tipo_7_s=="Todos":
         
@@ -78,7 +78,7 @@ def Historial(usuario,puesto):
 
       data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
       data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
-      
+
     elif personal_7=="Todos" and proceso_7_s=="Todos" and tipo_7_s!="Todos":
         
       if tipo_7_s=="Ordinario":
@@ -302,7 +302,7 @@ def Historial(usuario,puesto):
     placeholder17_7 = st.empty()
     horas_7=placeholder17_7.subheader("Resumen de Horas")  
 
-    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["predios","horas"]].agg(np.sum)
+    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)["predios","horas"].agg(np.sum)
   
     pivot_r=len(data_2_r.iloc[:,0])
     pivot_c=len(data_2_c.iloc[:,0])
@@ -314,41 +314,13 @@ def Historial(usuario,puesto):
       error_horas= placeholder18_7.error('No existen horas para mostrar')
 
     else:
-    
-      
-    
-      data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
 
-      data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
-      
-      placeholdera = st.empty()
-      placeholderb = st.empty()
-      placeholderc = st.empty()
-      
-      historialr= placeholdera.dataframe(data=data_2_r)
-      historialc= placeholderb.dataframe(data=data_2_c)
-      historialo= placeholderc.dataframe(data=data_2_o)
-      
       nombre_r=data_2_r.iloc[:,0]
       nombre_c=data_2_c.iloc[:,0]
       nombre_o=data_2_o.iloc[:,0]
-      
-      placeholderf = st.empty()
-      historialf= placeholderf.dataframe(data=nombre_r)
-      
-      placeholderd = st.empty()
-      
-      historiald= placeholderd.dataframe(data=nombre_c)
-      
-      placeholdere = st.empty()
-      
-      historiale= placeholdere.dataframe(np.concat(nombrer,nombre_c))
-
 
       nombre_horas= nombre_r.append(nombre_c)
-      nombre_horas= nombre_r.append(nombre_o)
+      nombre_horas= nombre_horas.append(nombre_o)
 
       fecha_r=data_2_r.iloc[:,1]
       fecha_c=data_2_c.iloc[:,1]
@@ -465,7 +437,7 @@ def Historial(usuario,puesto):
     proceso_7_o= placeholder33_7.selectbox("Proceso", options=("Todos","Conformación","Control de Calidad Conformación","Información Final I","Control de Calidad IF I","Información Final II","Información Final III"), key="proceso_7_o")
 
     placeholder34_7 = st.empty()
-    tipo_7_o = placeholder34_7.selectbox("Tipo", options=("Todos","Ordinario","Afectados","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_o")    
+    tipo_7_o = placeholder34_7.selectbox("Tipo", options=("Todos","Ordinario","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_7_o")    
 
     if proceso_7_o =="Todos" and tipo_7_o=="Todos":
         
