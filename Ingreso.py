@@ -16,7 +16,7 @@ hide_menu_style = """
         #MainMenu {visibility: hidden;}
         footer {visibility:visible;}
         footer:after{
-            content:'V.1.8 Copyrigth @ 2023 Telespazio Argentina S.A.';
+            content:'V.1.9 Copyrigth @ 2023 Telespazio Argentina S.A.';
             display: block;
             position: relative;
             color: tomato;
@@ -150,6 +150,6 @@ if pivot!=1:
 
      st.header("Aplicación de uso exclusivo para el personal de Telespazio Argentina S.A.")
 
-     st.subheader("En caso de dudas favor revisar el siguiente video tutorial en el apartado ### de la wiki")
+     st.subheader("En caso de dudas favor revisar el siguiente video tutorial en el apartado 15. Registros y Bonos de la wiki")
 
      st.subheader("Para soporte técnico favor escribir a basilio.nunez@tpzco.com")
