@@ -57,7 +57,7 @@ def IFI(usuario,puesto):
   estado_3= placeholder11_3.selectbox("Estado", options=("En Proceso","Conflicto","Terminado"), key="estado_3")
        
   placeholder12_3= st.empty()
-  tipo_3= placeholder12_3.selectbox("Tipo", options=("Ordinario","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_3")
+  tipo_3= placeholder12_3.selectbox("Tipo", options=("Ordinario","Georreferenciación","Corrección Primera Revisión","Corrección Primera Reinspección"), key="tipo_3")
 
   placeholder13_3= st.empty()
   predios_3= placeholder13_3.number_input("Cantidad de Predios Producidos",min_value=0,step=1,key="predios_3")
