@@ -54,7 +54,7 @@ def CC_IFI(usuario,puesto):
   bloque_12= placeholder10_12.text_input("Bloque",key="bloque_11")
     
   placeholder11_12= st.empty()
-  estado_12= placeholder11_12.selectbox("Estado", options=("En Proceso","Georrefenciación Aprobada","Georrefenciación Rechazada","Aprobado","Rechazado","Primera Reinspección Aprobada","Primera Reinspección Rechazada","Segunda Reinspección Aprobada","Segunda Reinspección Rechazada"), key="estado_12")
+  estado_12= placeholder11_12.selectbox("Estado", options=("En Proceso","Georreferenciación Aprobada","Georreferenciación Rechazada","Aprobado","Rechazado","Primera Reinspección Aprobada","Primera Reinspección Rechazada","Segunda Reinspección Aprobada","Segunda Reinspección Rechazada"), key="estado_12")
               
   placeholder12_12= st.empty()
   predios_12= placeholder12_12.number_input("Cantidad de Predios Revisados",min_value=0,step=1,key="predios_12")
