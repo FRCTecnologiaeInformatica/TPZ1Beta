@@ -152,4 +152,4 @@ if pivot!=1:
 
      st.subheader("En caso de dudas favor revisar el siguiente video tutorial en el apartado 15. Registros y Bonos de la wiki")
 
-     st.subheader("Para soporte técnico favor escribir a basilio.nunez@tpzco.com")
+     st.subheader("Para soporte técnico favor escribir a basilio.nunez@tpzcr.com")
