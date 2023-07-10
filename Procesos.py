@@ -51,7 +51,7 @@ def Procesos1(usuario,puesto):
         cc_ifi_2 = placeholder13_2.button("Control de Calidad IF I",key="cc_ifi_2")
 
         placeholder14_2= st.empty()
-        auxiliares_2 = placeholder13_2.button("Auxiliares",key="auxiliares_2")
+        auxiliares_2 = placeholder14_2.button("Auxiliares",key="auxiliares_2")
 
 
         # ----- Historial ---- #
