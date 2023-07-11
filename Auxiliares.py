@@ -57,7 +57,7 @@ def Auxiliares(usuario,puesto):
   bloque_14= placeholder11_14.number_input("Bloque o Distrito",min_value=10000000,max_value=99999999,step=1,key="bloque_14")
     
   placeholder12_14= st.empty()
-  predios_14= placeholder12_14.number_input("Cantidad de Predios Producidos",min_value=0,step=1,key="predios_14")
+  predios_14= placeholder12_14.number_input("Cantidad de Planos Producidos",min_value=0,step=1,key="predios_14")
 
   placeholder13_14= st.empty()
   horas_14= placeholder13_14.number_input("Cantidad de Horas Trabajadas en el Proceso",min_value=0.0,key="horas_14")
