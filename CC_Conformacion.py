@@ -54,7 +54,7 @@ def CC_Conformacion(usuario,puesto):
   bloque_11= placeholder10_11.number_input("Bloque",min_value=10000000,max_value=99999999,step=1,key="bloque_11")
     
   placeholder11_11= st.empty()
-  estado_11= placeholder11_11.selectbox("Estado",options=("En Proceso","Aprobado","Rechazado","Primera Reinspección Aprobada","Primera Reinspección Rechazada","Segunda Reinspección Aprobada","Segunda Reinspección Rechazada"), key="estado_11")
+  estado_11= placeholder11_11.selectbox("Estado",options=("En Proceso","Aprobado","Rechazado","Primera Reinspección Aprobada","Primera Reinspección Rechazada","Segunda Reinspección Aprobada","Segunda Reinspección Rechazada","Correcciones"), key="estado_11")
               
   placeholder12_11= st.empty()
   predios_11= placeholder12_11.number_input("Cantidad de Predios Revisados",min_value=0,step=1,key="predios_11")
