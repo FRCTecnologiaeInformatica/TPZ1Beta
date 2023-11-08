@@ -50,7 +50,7 @@ def Validacion(usuario,puesto):
   placeholder9_15= st.empty()
   fecha_15= placeholder9_15.date_input("Fecha",value=default_date_15,key="fecha_15")
 
- placeholder10_15= st.empty()
+  placeholder10_15= st.empty()
   bloque_15= placeholder10_15.number_input("Bloque",min_value=10000000,max_value=99999999,step=1,key="bloque_15")
     
   placeholder11_15= st.empty()
