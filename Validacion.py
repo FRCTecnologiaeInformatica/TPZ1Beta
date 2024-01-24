@@ -57,7 +57,7 @@ def Validacion(usuario,puesto):
   estado_15= placeholder11_15.selectbox("Estado", options=("En Proceso","Conflicto","Terminado"), key="estado_15")
        
   placeholder12_15= st.empty()
-  tipo_15= placeholder12_15.selectbox("Tipo", options=("Ordinario","Fincas No Ubicadas"), key="tipo_15")
+  tipo_15= placeholder12_15.selectbox("Tipo", options=("Ordinario","Fincas No Ubicadas","Afectados"), key="tipo_15")
 
   placeholder13_15= st.empty()
   predios_15= placeholder13_15.number_input("Cantidad de Predios Producidos",min_value=0,step=1,key="predios_15")
