@@ -1,7 +1,7 @@
 # ----- Librerías ---- #
 
 import streamlit as st
-import Historial, Capacitacion, Otros_Registros, Bonos, Salir, IFI, IFII, IFIII, Conformacion, CC_Conformacion, CC_IFI,Auxiliares,Validacion,Testing,Ubicacion
+import Historial, Capacitacion, Otros_Registros, Bonos, Salir, IFI, IFII, IFIII, Conformacion, CC_Conformacion, CC_IFI, Auxiliares, Validacion, Testing, Ubicacion
 
 # ----- Procesos 1 ---- #
 
