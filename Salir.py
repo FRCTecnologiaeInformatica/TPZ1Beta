@@ -141,4 +141,4 @@ def Salir():
 
             st.subheader("En caso de dudas favor revisar el siguiente video tutorial en el apartado 16. Registros y Bonos de la wiki")
 
-            st.subheader("Para soporte técnico favor escribir a basilio.nunez@telespazio.com")
+            st.subheader("Para soporte técnico favor escribir a daniela.rivera@telespazio.pe")
