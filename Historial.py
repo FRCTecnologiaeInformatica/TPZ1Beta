@@ -610,7 +610,7 @@ def Historial(usuario,puesto):
       datos_producción_pivot = {nombre: datos_producción[datos_producción["Nombre"] == nombre] for nombre in nombres}
       fig_producción = go.Figure()
       for nombre, datos_producción in datos_producción_pivot.items():
-        fig_producción = fig_producción.add_trace(go.Scatter(x=datos_producción["Fecha"], y=datos_producción["Producción"], name=nombre))
+        fig_producción = fig_producción.add_trace(go.Scatter(x=datos_producción["Fecha"], y=datos_producción["Rendimiento"], name=nombre))
 
       placeholder48_7 = st.empty()
       grafico_producción= placeholder48_7.plotly_chart(fig_producción)
