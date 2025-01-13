@@ -94,7 +94,7 @@ def Bonos(usuario,puesto):
     personal_9= placeholder13_9.selectbox("Personal",data_personal_9,key="personal_9")
 
     placeholder14_9 = st.empty()
-    periodo_bonos_9 = placeholder14_9.selectbox("Periodo de Bono", options=("Febrero-2023","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023","Agosto-2023","Septiembre-2023","Octubre-2023","Noviembre-2023","Diciembre-2023","Enero-2024","Febrero-2024","Marzo-2024","Abril-2024","Mayo-2024","Junio-2024","Julio-2024","Agosto-2024","Septiembre-2024","Septiembre-2024-Caso Especial","Octubre-2024","Noviembre-2024","Diciembre-2024","Enero-2025","Febrero-2025","Marzo-2025","Abril-2025","Mayo-2025","Junio-2025","Julio-2025","Agosto-2025","Septiembre-2025","Octubre-2025","Noviembre-2025","Diciembre-2025"), key="periodo_bonos_9")    
+    periodo_bonos_9 = placeholder14_9.selectbox("Periodo de Bono", options=("Febrero-2023","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023","Agosto-2023","Septiembre-2023","Octubre-2023","Noviembre-2023","Diciembre-2023","Enero-2024","Febrero-2024","Marzo-2024","Abril-2024","Mayo-2024","Junio-2024","Julio-2024","Agosto-2024","Septiembre-2024","Septiembre-2024-Caso Especial","Octubre-2024","Noviembre-2024","Diciembre-2024","Enero-2025","Enero-2025 Caso Especial","Febrero-2025","Marzo-2025","Abril-2025","Mayo-2025","Junio-2025","Julio-2025","Agosto-2025","Septiembre-2025","Octubre-2025","Noviembre-2025","Diciembre-2025"), key="periodo_bonos_9")    
 
     if personal_9 == "Todos" :
 
@@ -314,7 +314,7 @@ def Bonos(usuario,puesto):
     titulo_bonos_9 = placeholder23_9.subheader("Bonos")
 
     placeholder24_9 = st.empty()
-    periodo_bonos_9 = placeholder24_9.selectbox("Periodo de Bono",options=("Febrero-2023","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023","Agosto-2023","Septiembre-2023","Octubre-2023","Noviembre-2023","Diciembre-2023","Enero-2024","Febrero-2024","Marzo-2024","Abril-2024","Mayo-2024","Junio-2024","Julio-2024","Agosto-2024","Septiembre-2024","Septiembre-2024-Caso Especial","Octubre-2024","Noviembre-2024","Diciembre-2024","Enero-2025","Febrero-2025","Marzo-2025","Abril-2025","Mayo-2025","Junio-2025","Julio-2025","Agosto-2025","Septiembre-2025","Octubre-2025","Noviembre-2025","Diciembre-2025"), key="periodo_bonos_9")    
+    periodo_bonos_9 = placeholder24_9.selectbox("Periodo de Bono",options=("Febrero-2023","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023","Agosto-2023","Septiembre-2023","Octubre-2023","Noviembre-2023","Diciembre-2023","Enero-2024","Febrero-2024","Marzo-2024","Abril-2024","Mayo-2024","Junio-2024","Julio-2024","Agosto-2024","Septiembre-2024","Septiembre-2024-Caso Especial","Octubre-2024","Noviembre-2024","Diciembre-2024","Enero-2025","Enero-2025 Caso Especial","Febrero-2025","Marzo-2025","Abril-2025","Mayo-2025","Junio-2025","Julio-2025","Agosto-2025","Septiembre-2025","Octubre-2025","Noviembre-2025","Diciembre-2025"), key="periodo_bonos_9")    
 
     bonos_9= pd.read_sql(f"select a0,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20,a21,a22,a23,a24,a25,a26,a27,a28,a29,a30,a31,a32,a33,a34,a35,a36,a37,a38,a39,a40,a41,a42,a43,a44,a45,a46,a47,a48,a49,a50,a51,a52,a53,a54,a55,a56,a57,a58,a59,a60,a61,a62,a63,a64,a65,a66,a67,a68,a69,a70,a71,a72,a73,a74,a75,a76,a77,a78,a79,a80,a81,a82,a83,a84,a85,a86,a87,a88,a89,a90,a91,a92,a93,a94,a95,a96,a97,a98,a99,a100,a101,a102,a103 from bonos where a0='{usuario}' and a103='{periodo_bonos_9}'", con)
     bonos_9=  pd.DataFrame(data=bonos_9)
@@ -504,7 +504,7 @@ def Bonos(usuario,puesto):
     titulo_bloques_9 = placeholder32_9.subheader("Bloques")
 
     placeholder33_9 = st.empty()
-    periodo_bloques_9 = placeholder33_9.selectbox("Fecha de Producción", options=("Todos","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023","Agosto-2023","Septiembre-2023","Octubre-2023","Noviembre-2023","Diciembre-2023","Enero-2024","Febrero-2024","Marzo-2024","Abril-2024","Mayo-2024","Junio-2024","Julio-2024","Agosto-2024","Septiembre-2024","Septiembre-2024-Caso Especial","Octubre-2024","Noviembre-2024","Diciembre-2024","Enero-2025","Febrero-2025","Marzo-2025","Abril-2025","Mayo-2025","Junio-2025","Julio-2025","Agosto-2025","Septiembre-2025","Octubre-2025","Noviembre-2025","Diciembre-2025"), key="periodo_bloques_9")    
+    periodo_bloques_9 = placeholder33_9.selectbox("Fecha de Producción", options=("Todos","Marzo-2023","Abril-2023","Mayo-2023","Junio-2023","Julio-2023","Agosto-2023","Septiembre-2023","Octubre-2023","Noviembre-2023","Diciembre-2023","Enero-2024","Febrero-2024","Marzo-2024","Abril-2024","Mayo-2024","Junio-2024","Julio-2024","Agosto-2024","Septiembre-2024","Septiembre-2024-Caso Especial","Octubre-2024","Noviembre-2024","Diciembre-2024","Enero-2025","Enero-2025 Caso Especial","Febrero-2025","Marzo-2025","Abril-2025","Mayo-2025","Junio-2025","Julio-2025","Agosto-2025","Septiembre-2025","Octubre-2025","Noviembre-2025","Diciembre-2025"), key="periodo_bloques_9")    
 
     if periodo_bloques_9=="Todos":
 
