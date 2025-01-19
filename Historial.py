@@ -374,11 +374,11 @@ def Historial(usuario,puesto):
 
     else:
          
-      fig_horas_total_1=px.bar(datos_horas,x="Fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"],barmode="group")
+      fig_horas_total_1=px.bar(datos_horas,x="fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"],barmode="group")
       placeholder31_7 = st.empty()
       grafico_horas_total_1= placeholder31_7.plotly_chart(fig_horas_total_1)
       
-      fig_horas_total_2=px.bar(datos_horas,x="Fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"])
+      fig_horas_total_2=px.bar(datos_horas,x="fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"])
 
       placeholder32_7 = st.empty()
       grafico_horas_total_2 = placeholder32_7.plotly_chart(fig_horas_total_2)
@@ -571,11 +571,11 @@ def Historial(usuario,puesto):
 
     else:
          
-      fig_horas_total_1=px.bar(datos_horas,x="Fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"],barmode="group")
+      fig_horas_total_1=px.bar(datos_horas,x="fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"],barmode="group")
       placeholder53_7 = st.empty()
       grafico_horas_total_1= placeholder53_7.plotly_chart(fig_horas_total_1)
       
-      fig_horas_total_2=px.bar(datos_horas,x="Fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"])
+      fig_horas_total_2=px.bar(datos_horas,x="fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"])
 
       placeholder54_7 = st.empty()
       grafico_horas_total_2 = placeholder54_7.plotly_chart(fig_horas_total_2)
