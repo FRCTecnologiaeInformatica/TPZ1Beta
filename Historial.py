@@ -271,10 +271,10 @@ def Historial(usuario,puesto):
     horas_7=placeholder17_7.subheader("Resumen de Horas")  
 
     data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
-    data_2_r.rename(columns={"horas":"horas_producción"}, inplace=True)
+    data_2_r.rename(columns={"horas":"horas_produccion"}, inplace=True)
     
     data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
-    data_2_c.rename(columns={"horas":"horas_capacitación"}, inplace=True)
+    data_2_c.rename(columns={"horas":"horas_capacitacion"}, inplace=True)
     
     data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
     data_2_o.rename(columns={"horas":"horas_otros_registros"}, inplace=True)
@@ -374,7 +374,7 @@ def Historial(usuario,puesto):
 
     else:
          
-      fig_horas_total_1=px.bar(datos_horas,x="Fecha", y=["Horas_Producción","Horas_Capacitación","Horas_Otros_Registros"],barmode="group")
+      fig_horas_total_1=px.bar(datos_horas,x="Fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"],barmode="group")
       placeholder31_7 = st.empty()
       grafico_horas_total_1= placeholder31_7.plotly_chart(fig_horas_total_1)
       
@@ -398,10 +398,8 @@ def Historial(usuario,puesto):
       data_1_r=pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
       
       data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
       data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
     elif proceso_7_o =="Todos" and tipo_7_o!="Todos":
 
@@ -414,20 +412,16 @@ def Historial(usuario,puesto):
         data_1_r=pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and tipo='{tipo_7_o}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
 
       data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
       data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
     elif proceso_7_o !="Todos" and tipo_7_o=="Todos":
         
       data_1_r=pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and proceso='{proceso_7_o}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
 
       data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
       data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
     elif proceso_7_o !="Todos" and tipo_7_o!="Todos":
 
@@ -440,10 +434,8 @@ def Historial(usuario,puesto):
         data_1_r=pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,horario,puesto,supervisor,proceso,fecha,bloque,estado,tipo,cast(predios as integer),cast(horas as float) from registro where usuario='{usuario}' and proceso='{proceso_7_o}' and tipo='{tipo_7_o}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
 
       data_1_c = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,tema,cast(horas as float),reporte from capacitaciones where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
       data_1_o = pd.read_sql(f"select cast(id as integer),marca,usuario,nombre,puesto,supervisor,fecha,motivo,cast(horas as float),observaciones,reporte from otros_registros where usuario='{usuario}' and fecha>='{fecha_de__inicio_7}' and fecha<='{fecha_de__finalizacion_7}'", con)
-      data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
 
     # ----- Reportes ---- #
 
@@ -470,7 +462,14 @@ def Historial(usuario,puesto):
     placeholder39_7 = st.empty()
     horas_7=placeholder39_7.subheader("Resumen de Horas")  
 
-    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["predios","horas"]].agg(np.sum)
+    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
+    data_2_r.rename(columns={"horas":"horas_produccion"}, inplace=True)
+    
+    data_2_c = data_1_c.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
+    data_2_c.rename(columns={"horas":"horas_capacitacion"}, inplace=True)
+    
+    data_2_o = data_1_o.groupby(["nombre", "fecha"], as_index=False)["horas"].agg(np.sum)
+    data_2_o.rename(columns={"horas":"horas_otros_registros"}, inplace=True)
   
     pivot_r=len(data_2_r.iloc[:,0])
     pivot_c=len(data_2_c.iloc[:,0])
@@ -482,42 +481,21 @@ def Historial(usuario,puesto):
       error_horas= placeholder40_7.error('No existen horas para mostrar')
 
     else:
+      
+      datos_horas= pd.concat([data_2_r,data_2_c,data_2_o], axis=0)
+    
+      datos_horas = pd.DataFrame(data=datos_horas).groupby(["nombre","fecha"],as_index=False).size()
 
-      nombre_r=data_2_r.iloc[:,0]
-      nombre_c=data_2_c.iloc[:,0]
-      nombre_o=data_2_o.iloc[:,0]
+      datos_horas = pd.merge(datos_horas,data_2_r, on=['nombre','fecha'], how="left") 
+      datos_horas = pd.merge(datos_horas,data_2_c, on=['nombre','fecha'], how="left") 
+      datos_horas = pd.merge(datos_horas,data_2_o, on=['nombre','fecha'], how="left") 
 
-      nombre_horas= pd.concat([nombre_r,nombre_c])
-      nombre_horas= pd.concat([nombre_horas,nombre_o])
-
-      fecha_r=data_2_r.iloc[:,1]
-      fecha_c=data_2_c.iloc[:,1]
-      fecha_o=data_2_o.iloc[:,1]
-
-      fecha_horas=pd.concat([fecha_r,fecha_c])
-      fecha_horas=pd.concat([fecha_horas,fecha_o])
-
-      datos_horas = pd.DataFrame(data={"Nombre":nombre_horas,"Fecha":fecha_horas}).groupby(["Nombre","Fecha"],as_index=False).size()
-
-      datos_horas["Horas_Producción"] = 0.0000
-      datos_horas["Horas_Capacitación"] = 0.0000
-      datos_horas["Horas_Otros_Registros"] = 0.0000
-
-      for i in range(len(datos_horas)):
-          
-          for j in range(len(data_2_r)):
-              if datos_horas.iloc[i,0] == data_2_r.iloc[j,0] and datos_horas.iloc[i,1] == data_2_r.iloc[j,1]:
-                  datos_horas.iloc[i,3] = data_2_r.iloc[j,3]
-
-          for l in range(len(data_2_c)):
-              if datos_horas.iloc[i,0] == data_2_c.iloc[l,0] and datos_horas.iloc[i,1] == data_2_c.iloc[l,1]:
-                  datos_horas.iloc[i,4] = data_2_c.iloc[l,2]
-
-          for n in range(len(data_2_o)):
-              if datos_horas.iloc[i,0] == data_2_o.iloc[n,0] and datos_horas.iloc[i,1] == data_2_o.iloc[n,1]:
-                  datos_horas.iloc[i,5] = data_2_o.iloc[n,2]
+      datos_horas= datos_horas.fillna(0)
 
       datos_horas["Total"]= datos_horas.iloc[:,3:6].sum(axis=1)
+
+      placeholder19_7 = st.empty()
+      historial_7_horas= placeholder19_7.dataframe(data=datos_horas)
 
       placeholder41_7 = st.empty()
       historial_7_horas= placeholder41_7.dataframe(data=datos_horas)
@@ -593,7 +571,7 @@ def Historial(usuario,puesto):
 
     else:
          
-      fig_horas_total_1=px.bar(datos_horas,x="Fecha", y=["Horas_Producción","Horas_Capacitación","Horas_Otros_Registros"],barmode="group")
+      fig_horas_total_1=px.bar(datos_horas,x="Fecha", y=["horas_produccion","horas_capacitacion","horas_otros_registros"],barmode="group")
       placeholder53_7 = st.empty()
       grafico_horas_total_1= placeholder53_7.plotly_chart(fig_horas_total_1)
       
