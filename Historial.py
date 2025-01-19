@@ -333,10 +333,9 @@ def Historial(usuario,puesto):
 
      # datos_horas["Horas_Producción"] = 0.0000
      # datos_horas["Horas_Capacitación"] = 0.0000
-     # datos_horas["Horas_Otros_Registros"] = 0.0000
+      # datos_horas["Horas_Otros_Registros"] = 0.0000
 
-
-      datos_horas = pd.merge(datos_horas, data_2_r, on=['nombre','fecha'], how="left") 
+      datos_horas = pd.merge(datos_horas,[data_2_r,data_2_c_data_2_o], on=['nombre','fecha'], how="left") 
 
     # datos_horas["Total"]= datos_horas.iloc[:,3:6].sum(axis=1)
 
