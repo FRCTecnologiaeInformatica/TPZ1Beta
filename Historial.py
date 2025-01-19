@@ -335,7 +335,7 @@ def Historial(usuario,puesto):
      # datos_horas["Horas_Capacitación"] = 0.0000
      # datos_horas["Horas_Otros_Registros"] = 0.0000
 
-      datos_horas = pd.merge(datos_horas, datos_r_2, on='Nombre', how="left") 
+      datos_horas = pd.merge(datos_horas, data_r_2, on='Nombre', how="left") 
 
 
       data_2_r
