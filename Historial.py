@@ -331,25 +331,18 @@ def Historial(usuario,puesto):
 
       datos_horas = pd.DataFrame(data={"Nombre":nombre_horas,"Fecha":fecha_horas}).groupby(["Nombre","Fecha"],as_index=False).size()
 
-      datos_horas["Horas_Producción"] = 0.0000
-      datos_horas["Horas_Capacitación"] = 0.0000
-      datos_horas["Horas_Otros_Registros"] = 0.0000
+     # datos_horas["Horas_Producción"] = 0.0000
+     # datos_horas["Horas_Capacitación"] = 0.0000
+     # datos_horas["Horas_Otros_Registros"] = 0.0000
 
-      for i in range(len(datos_horas)):
-          
-          for j in range(len(data_2_r)):
-              if datos_horas.iloc[i,0] == data_2_r.iloc[j,0] and datos_horas.iloc[i,1] == data_2_r.iloc[j,1]:
-                  datos_horas.iloc[i,3] = data_2_r.iloc[j,3]
+      datos_horas = pd.merge(datos_horas, datos_r_2, on='Nombre', how="left") 
 
-          for l in range(len(data_2_c)):
-              if datos_horas.iloc[i,0] == data_2_c.iloc[l,0] and datos_horas.iloc[i,1] == data_2_c.iloc[l,1]:
-                  datos_horas.iloc[i,4] = data_2_c.iloc[l,2]
 
-          for n in range(len(data_2_o)):
-              if datos_horas.iloc[i,0] == data_2_o.iloc[n,0] and datos_horas.iloc[i,1] == data_2_o.iloc[n,1]:
-                  datos_horas.iloc[i,5] = data_2_o.iloc[n,2]
+      data_2_r
+      data_2_r
+      data_2_r
 
-      datos_horas["Total"]= datos_horas.iloc[:,3:6].sum(axis=1)
+    # datos_horas["Total"]= datos_horas.iloc[:,3:6].sum(axis=1)
 
       placeholder19_7 = st.empty()
       historial_7_horas= placeholder19_7.dataframe(data=datos_horas)
