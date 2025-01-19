@@ -315,24 +315,24 @@ def Historial(usuario,puesto):
 
     else:
       
-      #nombre_r=data_2_r.iloc[:,0]
-      #nombre_c=data_2_c.iloc[:,0]
-      #nombre_o=data_2_o.iloc[:,0]
+      nombre_r=data_2_r.iloc[:,0]
+      nombre_c=data_2_c.iloc[:,0]
+      nombre_o=data_2_o.iloc[:,0]
 
-      #nombre_horas= pd.concat([nombre_r,nombre_c])
-      #nombre_horas= pd.concat([nombre_horas,nombre_o])
+      nombre_horas= pd.concat([nombre_r,nombre_c])
+      nombre_horas= pd.concat([nombre_horas,nombre_o])
 
-      #fecha_r=data_2_r.iloc[:,1]
-      #fecha_c=data_2_c.iloc[:,1]
-      #fecha_o=data_2_o.iloc[:,1]
+      fecha_r=data_2_r.iloc[:,1]
+      fecha_c=data_2_c.iloc[:,1]
+      fecha_o=data_2_o.iloc[:,1]
 
-      #fecha_horas=pd.concat([fecha_r,fecha_c])
-      #fecha_horas=pd.concat([fecha_horas,fecha_o])
+      fecha_horas=pd.concat([fecha_r,fecha_c])
+      fecha_horas=pd.concat([fecha_horas,fecha_o])
 
-      datos_horas= pd.concat([data_2_r,data_2_c,data_2_o], axis=0
+      df= pd.concat([data_2_r,data_2_c,data_2_o], axis=0)
             
-      print (datos_horas)
-      #datos_horas = pd.DataFrame(data={"nombre":nombre_horas,"fecha":fecha_horas}).groupby(["nombre","fecha"],as_index=False).size()
+      print (df)
+      datos_horas = pd.DataFrame(data={"nombre":nombre_horas,"fecha":fecha_horas}).groupby(["nombre","fecha"],as_index=False).size()
 
 
 # Renaming columns
