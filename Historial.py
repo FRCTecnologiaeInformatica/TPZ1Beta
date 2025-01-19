@@ -302,7 +302,7 @@ def Historial(usuario,puesto):
     placeholder17_7 = st.empty()
     horas_7=placeholder17_7.subheader("Resumen de Horas")  
 
-    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["predios","horas"]].agg(np.sum)
+    data_2_r = data_1_r.groupby(["nombre", "fecha"], as_index=False)[["horas"]].agg(np.sum)
   
     pivot_r=len(data_2_r.iloc[:,0])
     pivot_c=len(data_2_c.iloc[:,0])
@@ -329,7 +329,7 @@ def Historial(usuario,puesto):
       fecha_horas=pd.concat([fecha_r,fecha_c])
       fecha_horas=pd.concat([fecha_horas,fecha_o])
 
-      datos_horas = pd.DataFrame(data={"nombre":nombre_horas,"Fecha":fecha_horas}).groupby(["nombre","Fecha"],as_index=False).size()
+      datos_horas = pd.DataFrame(data={"nombre":nombre_horas,"fecha":fecha_horas}).groupby(["nombre","fecha"],as_index=False).size()
 
      # datos_horas["Horas_Producción"] = 0.0000
      # datos_horas["Horas_Capacitación"] = 0.0000
@@ -337,10 +337,6 @@ def Historial(usuario,puesto):
 
       datos_horas = pd.merge(datos_horas, data_2_r, on='nombre', how="left") 
 
-
-      data_2_r
-      data_2_r
-      data_2_r
 
     # datos_horas["Total"]= datos_horas.iloc[:,3:6].sum(axis=1)
 
