@@ -564,7 +564,7 @@ def Historial(usuario,puesto):
       placeholder51_7 = st.empty()
       grafico_producción_total= placeholder51_7.plotly_chart(fig_producción_total)
 
-    if pivot_r!=0 and pivot_c!=0 and pivot_o!=0:
+    if pivot_r!=0 or pivot_c!=0 or pivot_o!=0:
        
       placeholder52_7 = st.empty()
       error_horas_total = placeholder52_7.error('No existen horas para mostrar')
