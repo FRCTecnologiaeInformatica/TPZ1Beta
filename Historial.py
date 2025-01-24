@@ -608,11 +608,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder18_7.empty()
-        placeholder30_7.empty()
         
       else:
         placeholder19_7.empty()
         placeholder20_7.empty()
+
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder30_7.empty()
+        
+      else: 
         placeholder31_7.empty()
         placeholder32_7.empty()
       
@@ -627,7 +631,7 @@ def Historial(usuario,puesto):
         placeholder26_7.empty()
         placeholder29_7.empty()
 
-    elif puesto=="Operario Catastral":
+    elif puesto=="Operario Catastral" or puesto=="Profesional Jurídico":
       placeholder33_7.empty()
       placeholder34_7.empty()
       placeholder35_7.empty()
@@ -644,11 +648,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder40_7.empty()
-        placeholder52_7.empty()
         
       else:
         placeholder41_7.empty()
         placeholder42_7.empty()
+
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder52_7.empty()
+        
+      else: 
         placeholder53_7.empty()
         placeholder54_7.empty()
         
@@ -712,11 +720,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder18_7.empty()
-        placeholder30_7.empty()
         
       else:
         placeholder19_7.empty()
         placeholder20_7.empty()
+
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder30_7.empty()
+        
+      else: 
         placeholder31_7.empty()
         placeholder32_7.empty()
       
@@ -731,7 +743,7 @@ def Historial(usuario,puesto):
         placeholder26_7.empty()
         placeholder29_7.empty()
 
-    elif puesto=="Operario Catastral":
+    elif puesto=="Operario Catastral" or puesto=="Profesional Jurídico":
       placeholder33_7.empty()
       placeholder34_7.empty()
       placeholder35_7.empty()
@@ -748,11 +760,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder40_7.empty()
-        placeholder52_7.empty()
         
       else:
         placeholder41_7.empty()
         placeholder42_7.empty()
+        
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder52_7.empty()
+        
+      else: 
         placeholder53_7.empty()
         placeholder54_7.empty()
         
@@ -802,11 +818,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder18_7.empty()
-        placeholder30_7.empty()
         
       else:
         placeholder19_7.empty()
         placeholder20_7.empty()
+
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder30_7.empty()
+        
+      else: 
         placeholder31_7.empty()
         placeholder32_7.empty()
       
@@ -821,7 +841,7 @@ def Historial(usuario,puesto):
         placeholder26_7.empty()
         placeholder29_7.empty()
 
-    elif puesto=="Operario Catastral":
+    elif puesto=="Operario Catastral" or puesto=="Profesional Jurídico":
       placeholder33_7.empty()
       placeholder34_7.empty()
       placeholder35_7.empty()
@@ -838,11 +858,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder40_7.empty()
-        placeholder52_7.empty()
         
       else:
         placeholder41_7.empty()
         placeholder42_7.empty()
+    
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder52_7.empty()
+        
+      else: 
         placeholder53_7.empty()
         placeholder54_7.empty()
         
@@ -892,11 +916,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder18_7.empty()
-        placeholder30_7.empty()
         
       else:
         placeholder19_7.empty()
         placeholder20_7.empty()
+
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder30_7.empty()
+        
+      else: 
         placeholder31_7.empty()
         placeholder32_7.empty()
       
@@ -911,7 +939,7 @@ def Historial(usuario,puesto):
         placeholder26_7.empty()
         placeholder29_7.empty()
 
-    elif puesto=="Operario Catastral":
+    elif puesto=="Operario Catastral" or puesto=="Profesional Jurídico":
       placeholder33_7.empty()
       placeholder34_7.empty()
       placeholder35_7.empty()
@@ -928,11 +956,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder40_7.empty()
-        placeholder52_7.empty()
         
       else:
         placeholder41_7.empty()
         placeholder42_7.empty()
+
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder52_7.empty()
+        
+      else: 
         placeholder53_7.empty()
         placeholder54_7.empty()
         
@@ -982,13 +1014,18 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder18_7.empty()
-        placeholder30_7.empty()
         
       else:
         placeholder19_7.empty()
         placeholder20_7.empty()
+
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder30_7.empty()
+        
+      else: 
         placeholder31_7.empty()
         placeholder32_7.empty()
+      
       
       if pivot_r==0:
         placeholder22_7.empty()
@@ -1001,7 +1038,7 @@ def Historial(usuario,puesto):
         placeholder26_7.empty()
         placeholder29_7.empty()
 
-    elif puesto=="Operario Catastral":
+    elif puesto=="Operario Catastral" or puesto=="Profesional Jurídico":
       placeholder33_7.empty()
       placeholder34_7.empty()
       placeholder35_7.empty()
@@ -1018,11 +1055,15 @@ def Historial(usuario,puesto):
          
       if pivot_r==0 and pivot_c==0 and pivot_o==0:
         placeholder40_7.empty()
-        placeholder52_7.empty()
         
       else:
         placeholder41_7.empty()
         placeholder42_7.empty()
+        
+      if pivot_r==0 or pivot_c==0 or pivot_o==0:
+        placeholder52_7.empty()
+        
+      else: 
         placeholder53_7.empty()
         placeholder54_7.empty()
         
