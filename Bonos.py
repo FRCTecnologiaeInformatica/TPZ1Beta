@@ -44,7 +44,7 @@ def Bonos(usuario,puesto):
   nombre_9= pd.read_sql(f"select nombre from usuarios where usuario='{usuario}'",uri)
   nombre_9 = nombre_9.loc[0,'nombre']
 
-  if nombre_9=="Basilio Antonio Salazar Nunez":
+  if nombre_9=="Basilio Antonio Salazar Nunez" or nombre_9=="Daniela Rivera Navarro":
 
     placeholder8_9 = st.empty()
     archivos = placeholder8_9.subheader("Archivos")
@@ -543,7 +543,7 @@ def Bonos(usuario,puesto):
     placeholder6_9.empty()
     placeholder7_9.empty()
 
-    if nombre_9=="Basilio Antonio Salazar Nunez":
+    if nombre_9=="Basilio Antonio Salazar Nunez" or nombre_9=="Daniela Rivera Navarro":
 
       placeholder8_9.empty()
       placeholder9_9.empty()
@@ -639,7 +639,7 @@ def Bonos(usuario,puesto):
     placeholder6_9.empty()
     placeholder7_9.empty()
 
-    if nombre_9=="Basilio Antonio Salazar Nunez":
+    if nombre_9=="Basilio Antonio Salazar Nunez" or nombre_9=="Daniela Rivera Navarro":
 
       placeholder8_9.empty()
       placeholder9_9.empty()
@@ -721,7 +721,7 @@ def Bonos(usuario,puesto):
     placeholder6_9.empty()
     placeholder7_9.empty()
 
-    if nombre_9=="Basilio Antonio Salazar Nunez":
+    if nombre_9=="Basilio Antonio Salazar Nunez" or nombre_9=="Daniela Rivera Navarro":
 
       placeholder8_9.empty()
       placeholder9_9.empty()
@@ -803,7 +803,7 @@ def Bonos(usuario,puesto):
     placeholder6_9.empty()
     placeholder7_9.empty()
 
-    if nombre_9=="Basilio Antonio Salazar Nunez":
+    if nombre_9=="Basilio Antonio Salazar Nunez" or nombre_9=="Daniela Rivera Navarro":
 
       placeholder8_9.empty()
       placeholder9_9.empty()
@@ -885,7 +885,7 @@ def Bonos(usuario,puesto):
     placeholder6_9.empty()
     placeholder7_9.empty()
 
-    if nombre_9=="Basilio Antonio Salazar Nunez":
+    if nombre_9=="Basilio Antonio Salazar Nunez" or nombre_9=="Daniela Rivera Navarro":
 
       placeholder8_9.empty()
       placeholder9_9.empty()
