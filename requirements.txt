@@ -53,7 +53,7 @@ semver==2.13.0
 six==1.16.0
 smmap==5.0.0
 SQLAlchemy<2.0
-streamlit==1.42.0
+streamlit==1.17.0
 tabula-py==2.7.0
 tenacity==8.1.0
 toml==0.10.2
